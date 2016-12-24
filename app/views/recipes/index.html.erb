@@ -1,9 +1,23 @@
 <h1>Receitas</h1>
-<ul>
-   <% @recipes.each do |recipe| %>
-    <li><%= recipe.name %>
-    <%= recipe.stuff %>
-    <%= recipe.calories %>
-    </li>
-   <% end %>
-</ul>
+<table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>nome:</th>
+            <th>Ingredientes:</th>
+            <th>calorias:</th>
+            <th>modo de preparo:</th>
+            <th>Custo de preparo:</th>
+        </tr>
+    </thead>
+    <tbody>
+    <%@recipes.each do |recipe|%>
+        <tr>
+            <th><%= recipe.name %></th>
+            <th><%= recipe.stuff %></th>
+            <th><%= recipe.calories %></th>
+            <th><%= recipe.prepare_mode %></th>
+            <th><%= recipe.cost %></th>
+        </tr>
+    <%end%>
+    </tbody>
+</table>
