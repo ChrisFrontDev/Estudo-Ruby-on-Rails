@@ -10,16 +10,16 @@
         </tr>
     </thead>
     <tbody>
-    <%@recipes.each do |recipe|%>
-        <tr>
-            <th><%= recipe.name %></th>
-            <th><%= truncate(recipe.stuff, lenght: 50, separator: ' ' ) %></th>
-            <th>
-              <%=format_calories(recipe)%>
-            </th>
-            <th><%= recipe.prepare_mode %></th>
-            <th><%= number_to_currency(recipe.cost) %></th>
-        </tr>
-    <%end%>
+        <%@recipes.each do |recipe|%>
+            <tr>
+                <th><%= link_to recipe.name ,   recipe %></th>
+                <th><%= truncate(recipe.stuff, lenght: 50, separator: ' ' ) %></th>
+                <th>
+                  <%=format_calories(recipe)%>
+                </th>
+                <th><%= recipe.prepare_mode %></th>
+                <th><%= number_to_currency(recipe.cost) %></th>
+            </tr>
+        <%end%>
     </tbody>
 </table>
