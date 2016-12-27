@@ -13,10 +13,12 @@
     <%@recipes.each do |recipe|%>
         <tr>
             <th><%= recipe.name %></th>
-            <th><%= recipe.stuff %></th>
-            <th><%= recipe.calories %></th>
+            <th><%= truncate(recipe.stuff, lenght: 50, separator: ' ' ) %></th>
+            <th>
+              <%=format_calories(recipe)%>
+            </th>
             <th><%= recipe.prepare_mode %></th>
-            <th><%= recipe.cost %></th>
+            <th><%= number_to_currency(recipe.cost) %></th>
         </tr>
     <%end%>
     </tbody>
