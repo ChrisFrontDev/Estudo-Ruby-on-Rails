@@ -1,0 +1,21 @@
+<article>
+  <body>
+    <h1><%=@recipe.name%></h1>
+    <div class="">
+      <h2>Ingredientes:</h2>
+      <p><%=@recipe.stuff%></p>
+    </div>
+    <div class="">
+      <h2>Calorias:</h2>
+      <p><%=@recipe.calories%></p>
+    </div>
+    <div class="">
+      <h2>Modo de preparo:</h2>
+      <p><%=@recipe.prepare_mode%></p>
+    </div>
+    <div class="">
+      <h2>Custo de preparo:</h2>
+      <p><%=number_to_currency(@recipe.cost)%></p>
+    </div>
+  </body>
+</article>
