@@ -1,5 +1,8 @@
 class Recipe < ApplicationRecord
   def light?
-      calories < 100
+    if calories!=nil
+         calories < 100
+
+    end
   end
 end
