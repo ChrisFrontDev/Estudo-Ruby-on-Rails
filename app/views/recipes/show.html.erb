@@ -19,5 +19,6 @@
     </div>
     <%= link_to "Voltar as Receitas", recipes_path %>
     <%= link_to "Editar Receita", edit_recipe_path %>
+    <%= link_to "Deletar Receita", recipe_path, method: :DELETE, data:{confirm: "Deseja Realmente Deletar a Receita ? "} %>
   </body>
 </article>
