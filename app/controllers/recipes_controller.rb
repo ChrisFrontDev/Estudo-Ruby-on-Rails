@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
     def create
         recipe_params = params.require(:recipe).permit(:name, :stuff, :calories, :prepare_mode, :cost)
         @recipe=Recipe.create(recipe_params)
-        redirect_to #index
+        redirect_to recipes_url
 
     end
     def destroy
